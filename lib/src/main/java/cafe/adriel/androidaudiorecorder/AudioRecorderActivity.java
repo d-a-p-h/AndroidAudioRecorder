@@ -332,7 +332,7 @@ public class AudioRecorderActivity extends AppCompatActivity
             stopRecording();
             player = new MediaPlayer();
             player.setDataSource(filePath);
-            player.prepare();
+            player.prepareAsync();
             player.start();
 
             visualizerView.linkTo(DbmHandler.Factory.newVisualizerHandler(this, player));
